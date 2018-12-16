@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Project.destroy_all
+Picture.destroy_all
+
+studybuddy = Project.create(title: "Study Buddy", details: "note taking application for students", tools:["react","redux","rails"])
+studybuddy_picture1 = Picture.create(picture: "temp holder for picture", context: "picture context", project_id: studybuddy.id)
